@@ -127,12 +127,11 @@ function onTaskbarWindowButtonClick(
     hsWindow.raise();
     hsWindow.focus();
   } else {
-    if (keyboardModifiers.cmd || keyboardModifiers.ctrl) {
-      // Just focus() the window because user just wants to make it visible
-      // instead of minimizing it
-      hsWindow.focus();
-    } else {
+    const focusedWindow=hs.window.focusedWindow()
+    if (hsWindow == focusedWindow) {
       hsWindow.minimize();
+    } else {
+      hsWindow.focus();
     }
   }
 }

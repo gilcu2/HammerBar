@@ -85,3 +85,8 @@ For example, the following will add a button for Apple's text editor:
     - Command or Control: Focus / raise the window instead of minimizing / maximizing
 - When clicking on an app in an App Menu:
     - Command or Control: Don't hide the menu after launching the app
+
+
+## Development
+
+npx tstl
